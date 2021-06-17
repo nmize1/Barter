@@ -2,7 +2,7 @@
  
 This is a Discord bot to be used as a store. Specifically, this was made for a DND 5e game. In addition to the files here, you'll also need an items.txt and regularitems.txt. These hold info about magic items that the bot will choose a selection of to be available and the standard items that should always be available, respectively. These files can't be shared due to them containing copywritten material. This is written primarily for a personal game, so it's not made to be super customizable. That said, it maybe might may be useful as a starting point if nothing else.
  
- #Item Files Formatting
+ # Item Files Formatting
  Both files can handle as many items as you want.
 
  items.txt follows this formatting:
