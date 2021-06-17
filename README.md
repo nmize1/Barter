@@ -1,6 +1,6 @@
 # Barter
  
-This is a Discord bot to be used as a store. Specifically, this was made for a DND 5e game. In addition to the files here, you'll also need an items.txt and regularitems.txt. These hold info about magic items that the bot will choose a selection of to be available and the standard items that should always be available, respectively. These files can't be shared due to them containing copywritten material. This is written primarily for a personal game, so it's not made to be super customizable. That said, it maybe might may be useful as a starting point if nothing else.
+This is a Discord bot to be used as a store. Specifically, this was made for a DND 5e game. In addition to the files here, you'll also need an items.txt and regularitems.txt. These hold info about magic items that the bot will choose a selection of to be available and the standard items that should always be available, respectively. These files can't be shared due to them containing copywritten material. This is written primarily for a personal game, so it's not made to be super customizable. That said, it maybe might may be useful as a starting point if nothing else. 
  
  # Item Files Formatting
  Both files can handle as many items as you want.
@@ -17,6 +17,14 @@ This is a Discord bot to be used as a store. Specifically, this was made for a D
  
  Category should be Armor, Simple, Martial, Foci, Regular Items, Packs, Tools, Gaming & Instruments, and Mounts & Vehicles. 
  This categories can be changed, but you'll also have to edit their references in Barter.py file to do so.
+ 
+ # Settings
+ 
+ storesettings.txt contains some info about the stock and price of the magic items. 
+ Aside from the first line, each line follows this formatting:
+ rarity num_of_this_rarity_to_stock base_price_of_this_rarity
+ 
+ The base price is later modified by a random multiplier. This currently can't be configured. 
  
  # Commands
  
@@ -58,6 +66,15 @@ $restock - restocks the magic item stock
 
 ![image](https://user-images.githubusercontent.com/50761210/122331415-c6f8a400-cf02-11eb-8d98-9ba1bc22b0b8.png)
 
+# TODO
+- Add multiplier config into storesettings.txt
+- Fix characters.txt so that it doesn't have multiple empty lines after removing characters
 
+Possible updates if I decide to keep working on this:
+- Allow for custom item categories 
+- Allow for more or less categories
 
+Possible but very very unlikely updates:
+- dndbeyond scraper to automatically create items.txt and regularitems.txt 
+This is technically possible, but would be very complicated for me so probably won't happen anytime soon.
 
