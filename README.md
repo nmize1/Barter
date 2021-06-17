@@ -60,7 +60,7 @@ $stock category - category is armor, simple, martial, foci, items, packs, tools,
 
 $buy char_name category item_name - char_name buys item_name from specified category
 
-![image](https://user-images.githubusercontent.com/50761210/122331382-b811f180-cf02-11eb-97c0-9b9a6d54951f.png)
+![image](https://user-images.githubusercontent.com/50761210/122332740-ee507080-cf04-11eb-9bc0-3c72209cc33d.png)
 
 $restock - restocks the magic item stock
 
