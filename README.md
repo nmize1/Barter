@@ -68,6 +68,7 @@ $restock - restocks the magic item stock
 
 # TODO
 - Add multiplier config into storesettings.txt
+- Add restock timer so magic item stock changes naturally 
 - Fix characters.txt so that it doesn't have multiple empty lines after removing characters
 
 Possible updates if I decide to keep working on this:
