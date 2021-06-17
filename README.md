@@ -43,6 +43,7 @@ $remove money char_name amount_to_sub - Removes amount_to_sub gold from char_nam
 $stock magic - displays the current stock of magic items and their costs
 
 ![image](https://user-images.githubusercontent.com/50761210/122330917-fbb82b80-cf01-11eb-9e0a-c9c619e6f4b6.png) 
+
 (beautiful cya censoring)
 
 $stock category - category is armor, simple, martial, foci, items, packs, tools, gaming, instruments, mounts, or vehicles - displays stock in the chosen category.
