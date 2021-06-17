@@ -1,0 +1,6 @@
+#number of items of each rarity to stock followed by base price
+common 10 100
+uncommon 5 500 
+rare 3 5000
+very_rare 2 10000
+legendary 1 100000
