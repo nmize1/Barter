@@ -74,7 +74,7 @@ $help - shows this list
 # TODO
 - ~~Add multiplier config into storesettings.txt~~ Done
 - Add restock timer so magic item stock changes naturally 
-- ~~Fix characters.txt so that it doesn't have multiple empty lines after removing characters (maybe just convert to json and forget it)~~ Caracters are now stored in json file
+- ~~Fix characters.txt so that it doesn't have multiple empty lines after removing characters (maybe just convert to json and forget it)~~ Characters are now stored in json file
 - ~~Fix float overflow deleting the character~~ Storing characters in json removed the need to rewrite the text file, which failed to readd characters after float overflow
 - Maybe more?
 
