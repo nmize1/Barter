@@ -66,6 +66,10 @@ $restock - restocks the magic item stock
 
 ![image](https://user-images.githubusercontent.com/50761210/122331415-c6f8a400-cf02-11eb-8d98-9ba1bc22b0b8.png)
 
+$help - shows this list
+![image](https://user-images.githubusercontent.com/50761210/122508803-94b57800-cfd0-11eb-8124-789b6d4e5dde.png)
+
+
 # TODO
 - Add multiplier config into storesettings.txt
 - Add restock timer so magic item stock changes naturally 
