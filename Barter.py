@@ -177,6 +177,11 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+    #### Commands ####
+    msg = ""
+    if message.content.startswith('$help'):
+        msg = "$list - Shows a list of characters currently registered by the bot and their current balance.\n$add_character char_name starting_balance - Registers a new character with the bot named 'char_name' and initialized with starting_balance gold. starting_balance must be a number.\n$remove_character char_name - Removes the character from the bot's register list\n$add money char_name amount_to_add - Adds amount_to_add gold to char_name\n$remove money char_name amount_to_sub - Removes amount_to_sub gold from char_name\n$stock magic - displays the current stock of magic items and their costs\n$stock category - category is armor, simple, martial, foci, items, packs, tools, gaming, instruments, mounts, or vehicles - displays stock in the chosen category.\n$buy char_name category item_name - char_name buys item_name from specified category\n$restock - restocks the magic item stock\n$help - show this message\n"
+        await message.channel.send(msg)
 
     #### Character Manipulations ####
     #return a list of characters and their money in character
