@@ -1,6 +1,9 @@
 import discord
 import os
 import random
+import json
+from json.decoder import JSONDecodeError
+
 
 
 client = discord.Client()
@@ -44,13 +47,19 @@ stock = {}
 rarities = []
 amounts = []
 prices = []
-price_multipliers = [.01, .25, .25, .5, .5, .5, .5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 5, 5, 10]
+pm = []
+price_multipliers = []
 def StockStore():
     #get stock settings
     with open("storesettings.txt") as settings:
         for line in settings:
             if line.startswith("#"):
-                print("#")
+                pass
+            elif line.startswith("MULT, "):
+                pm = line.split(',')
+                pm.pop(0)
+                for price in pm:
+                    price_multipliers.append(float(price))
             else:
                 (rarity, amount, price) = line.split()
                 rarities.append(rarity)
@@ -131,19 +140,20 @@ with open("regularitems.txt") as items:
                 mounts[item] = float(cost)
 
 #open the local character data and create characters with it
-with open("characters.txt") as dic:
-    #create a list of lines skipping any blank lines
-    lines = list(line for line in (l.strip() for l in dic) if line)
-    for line in lines:
-        (name, gold) = line.split()
-        characters[name] = gold
+with open("characters.json") as dic:
+    try:
+        characters = json.load(dic)
+    except JSONDecodeError:
+        pass
 
 def AddChar(name):
     if len(name) >= 3:
         if name[2].isdigit():
             characters[name[1]] = name[2]
-            with open("characters.txt", "a") as dic:
-                dic.write("\n" + name[1] + " " + name[2])
+            with open("characters.json", "w") as dic:
+                json.dump(characters, dic)
+                ### Old Dumb Way
+                #dic.write("\n" + name[1] + " " + name[2])
             return ("Added " + name[1] + " with " + name[2] + " gold.")
         else:
             return ('Second argument must be a number')
@@ -152,15 +162,11 @@ def AddChar(name):
 
 
 def RemoveChar(name):
-    gold = characters[name[1]]
-    with open("characters.txt", "r") as f:
-        lines = f.readlines()
-    with open("characters.txt", "w") as f:
-        for line in lines:
-            if line.strip("\n") != name[1] + " " + gold:
-                f.write(line)
-    del characters[name[1]]
-    return ("Removed " + name[1])
+    del(characters[name[1]])
+    with open("characters.json", "w") as dic:
+        json.dump(characters, dic)
+
+    return("Removed " + name[1])
 
 
 @client.event
