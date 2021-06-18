@@ -67,14 +67,16 @@ $restock - restocks the magic item stock
 ![image](https://user-images.githubusercontent.com/50761210/122331415-c6f8a400-cf02-11eb-8d98-9ba1bc22b0b8.png)
 
 $help - shows this list
+
 ![image](https://user-images.githubusercontent.com/50761210/122508803-94b57800-cfd0-11eb-8124-789b6d4e5dde.png)
 
 
 # TODO
-- Add multiplier config into storesettings.txt
+- ~~Add multiplier config into storesettings.txt~~ Done
 - Add restock timer so magic item stock changes naturally 
-- Fix characters.txt so that it doesn't have multiple empty lines after removing characters (maybe just convert to json and forget it)
-- Fix float overflow deleting the character
+- ~~Fix characters.txt so that it doesn't have multiple empty lines after removing characters (maybe just convert to json and forget it)~~ Caracters are now stored in json file
+- ~~Fix float overflow deleting the character~~ Storing characters in json removed the need to rewrite the text file, which failed to readd characters after float overflow
+- Maybe more?
 
 Possible updates if I decide to keep working on this:
 - Allow for custom item categories 
