@@ -81,6 +81,7 @@ $help - shows this list
 Possible updates if I decide to keep working on this:
 - Allow for custom item categories 
 - Allow for more or less categories
+- Optimizations
 - Maybe more?
 
 Possible but very very unlikely updates:
