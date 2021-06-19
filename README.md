@@ -76,6 +76,7 @@ $help - shows this list
 - Add restock timer so magic item stock changes naturally 
 - ~~Fix characters.txt so that it doesn't have multiple empty lines after removing characters (maybe just convert to json and forget it)~~ Characters are now stored in json file
 - ~~Fix float overflow deleting the character~~ Storing characters in json removed the need to rewrite the text file, which failed to readd characters after float overflow
+- Fix adding characters with over 2000 characters in their name or balance breaking the $add_character and $list commands until that character is removed.
 - Maybe more?
 
 Possible updates if I decide to keep working on this:
