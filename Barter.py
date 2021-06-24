@@ -152,8 +152,7 @@ def AddChar(name):
             characters[name[1]] = name[2]
             with open("characters.json", "w") as dic:
                 json.dump(characters, dic)
-                ### Old Dumb Way
-                #dic.write("\n" + name[1] + " " + name[2])
+
             return ("Added " + name[1] + " with " + name[2] + " gold.")
         else:
             return ('Second argument must be a number')
