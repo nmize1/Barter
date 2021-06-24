@@ -459,8 +459,8 @@ async def on_message(message):
                 else:
                     msg = "Sorry, I don't have any " + item + " right now. Check back later."
             elif(type == "gaming" or type == "instruments"):
-                if item in gaming:
-                    cost = gaming[item]
+                if item in gandm:
+                    cost = gandm[item]
                     bal = float(characters[char])
                     if(bal >= cost):
                         newbal = bal - cost
