@@ -88,5 +88,5 @@ Possible updates if I decide to keep working on this:
 Possible but very very unlikely updates:
 - dndbeyond scraper to automatically create items.txt and regularitems.txt 
 
-This is technically possible, but would be very complicated for me so probably won't happen anytime soon.
+This is technically possible, but would probably won't happen anytime soon.
 
